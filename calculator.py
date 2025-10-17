@@ -7,7 +7,6 @@ def get_numbers():
     """Get numbers from user input."""
     numbers = []
     print("Enter numbers (type 'done' when finished):")
-    
     while True:
         user_input = input("Enter a number: ").strip()
         if user_input.lower() == 'done':
@@ -17,7 +16,6 @@ def get_numbers():
             numbers.append(number)
         except ValueError:
             print("Invalid input. Please enter a valid number.")
-    
     return numbers
 
 
@@ -26,20 +24,19 @@ def main():
     print("=" * 50)
     print("Welcome to the Collaborative Calculator!")
     print("=" * 50)
-    
     numbers = get_numbers()
-    
+
     if len(numbers) == 0:
         print("No numbers entered. Exiting.")
         return
-    
+
     print(f"\nYou entered: {numbers}")
     print("\nWhat operation would you like to perform?")
     print("1. Add")
     print("2. Multiply")
-    
+
     choice = input("Enter your choice (1 or 2): ").strip()
-    
+
     # Operations will be implemented by other students
     if choice == '1':
         print("Addition feature coming soon!")
