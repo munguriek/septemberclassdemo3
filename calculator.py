@@ -21,6 +21,18 @@ def get_numbers():
     return numbers
 
 
+def add_numbers(numbers):
+    """
+    Add all numbers in the list.
+    
+    Args:
+        numbers (list): List of numbers to add
+        
+    Returns:
+        float: Sum of all numbers
+    """
+    return sum(numbers)
+
 def main():
     """Main function to run the calculator."""
     print("=" * 50)
@@ -42,7 +54,8 @@ def main():
     
     # Operations will be implemented by other students
     if choice == '1':
-        print("Addition feature coming soon!")
+        result = add_numbers(numbers)
+        print(f"\nResult: {' + '.join(map(str, numbers))} = {result}")
     elif choice == '2':
         print("Multiplication feature coming soon!")
     else:
