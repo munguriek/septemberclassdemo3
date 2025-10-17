@@ -33,6 +33,21 @@ def add_numbers(numbers):
     """
     return sum(numbers)
 
+def multiply_numbers(numbers):
+    """
+    Multiply all numbers in the list.
+    
+    Args:
+        numbers (list): List of numbers to multiply
+        
+    Returns:
+        float: Product of all numbers
+    """
+    result = 1
+    for num in numbers:
+        result *= num
+    return result
+
 def main():
     """Main function to run the calculator."""
     print("=" * 50)
@@ -57,7 +72,8 @@ def main():
         result = add_numbers(numbers)
         print(f"\nResult: {' + '.join(map(str, numbers))} = {result}")
     elif choice == '2':
-        print("Multiplication feature coming soon!")
+        result = multiply_numbers(numbers)
+        print(f"\nResult: {' × '.join(map(str, numbers))} = {result}")
     else:
         print("Invalid choice.")
 
